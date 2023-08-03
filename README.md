@@ -18,3 +18,8 @@
 ## How To Run
 
 { Step by step instructions to run the project. Mention any prerequisite tools/dependencies. }
+
+## Collaborators
+
+- { GitHub Username 1 }
+- { Add more ass appropriate }
