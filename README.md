@@ -22,4 +22,4 @@
 ## Collaborators
 
 - { GitHub Username 1 }
-- { Add more ass appropriate }
+- { Add more as appropriate }
