@@ -7,17 +7,13 @@
 ## Details
 
 - { What problem does this project solve? }
-- { What was your tech stack? }
-- { How did you use Directus? }
+- { Did you use any interesting libraries or services? }
+- { What extension type(s) did you build? }
 - { If given longer, what would be the next improvement you would make? }
 
 ## Screesnhots
 
 { Include at least one screenshot or video. }
-
-## How To Run
-
-{ Step by step instructions to run the project. Mention any prerequisite tools/dependencies. }
 
 ## Collaborators
 
