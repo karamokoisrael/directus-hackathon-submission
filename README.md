@@ -11,7 +11,7 @@
 - { What extension type(s) did you build? }
 - { If given longer, what would be the next improvement you would make? }
 
-## Screesnhots
+## Screenshots
 
 { Include at least one screenshot or video. }
 
