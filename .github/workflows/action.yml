@@ -1,0 +1,21 @@
+name: Docker Compose CI
+on:
+  push:
+    branches: [main, dev, legacy]
+  pull_request:
+    branches: [main, dev, legacy]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    # strategy:
+    #   matrix:
+    #     node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Copying environment variables
+        run: cp /home/mgx/environment/greenmind/.env ./.env
+      - name: Building app
+        run: sudo docker-compose build
+      - name: Deploying app
+        run: sudo docker-compose up -d

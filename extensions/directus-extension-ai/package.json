@@ -1,0 +1,33 @@
+{
+	"name": "@workspace/directus-extension-ai",
+	"version": "1.0.0",
+	"directus:extension": {
+		"host": "^9.22.4",
+		"type": "bundle",
+		"path": {
+			"app": "dist/app.js",
+			"api": "dist/api.js"
+		},
+		"entries": [
+			{
+				"type": "operation",
+				"name": "ml-ops-operation",
+				"source": {
+					"app": "src/ml-ops-operation/app.ts",
+					"api": "src/ml-ops-operation/api.ts"
+				}
+			},
+			{
+				"type": "module",
+				"name": "ml-ops-module",
+				"source": "src/ml-ops-module/index.ts"
+			}
+		]
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "9.22.4",
+		"@types/node": "^20.5.7",
+		"typescript": "^5.2.2",
+		"vue": "^3.3.4"
+	}
+}

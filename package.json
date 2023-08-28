@@ -1,0 +1,37 @@
+{
+  "name": "@workspace/directus",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx directus start",
+    "start:dev": "npx --node-options=--inspect directus start",
+    "dev": "pnpm --stream --parallel -r dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r --stream --parallel test",
+    "debug": "npx --node-options=--inspect directus start",
+    "lint": "eslint . --ext .ts",
+    "schema:save": "npx directus bootstrap && npx directus schema snapshot ./snapshot.yaml -y",
+    "schema:apply": "npx directus bootstrap && npx directus schema apply ./snapshot.yaml -y",
+    "sandbox:create": "rm ./database/sandbox.db && touch ./database/sandbox.db && npx directus bootstrap"
+  },
+  "dependencies": {
+    "@workspace/directus-extension-ai": "workspace:^1.0.0",
+    "directus": "^10.6.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/knex": "^0.16.1",
+    "@types/node": "latest",
+    "dotenv": "^16.3.1",
+    "jest": "^29.4.1",
+    "knex": "^2.5.1",
+    "nanoid": "^4.0.2",
+    "ts-jest": "^29.0.5",
+    "ts-node": "10.9.1",
+    "typescript": "~4.9.5"
+  }
+}

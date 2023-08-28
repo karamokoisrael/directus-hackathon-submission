@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  api:
+    container_name: ${API_CONTAINER_NAME}
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    ports:
+      - '${API_PORT}:8055'
+    volumes:
+      - api_uploads:/app/uploads
+      - api_database:/app/database
+    env_file:
+      - ./.env
+    environment:
+      PORT: 8055
+volumes:
+  api_uploads:
+  api_database:
