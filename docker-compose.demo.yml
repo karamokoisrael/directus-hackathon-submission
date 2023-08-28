@@ -7,7 +7,7 @@ services:
       context: .
     restart: always
     ports:
-      - '8061:8055'
+      - '8055:8055'
     volumes:
       - ./uploads:/app/uploads
       - api_database:/app/database
@@ -15,6 +15,7 @@ services:
       - ./.env
     environment:
       PORT: 8055
+      DB_FILENAME: "./database/sandbox.db"
 volumes:
   api_uploads:
   api_database:

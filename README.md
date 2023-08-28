@@ -15,3 +15,8 @@ This project is a set of extensions allowing developers of the directus communit
 
 { Include at least one screenshot or video. }
 
+## How to run ?
+
+1. Make sure you have created a .env file for directus configurations
+2. Make sure you have docker and docker-compose installed
+3. Run `docker-compose -f docker-compose.demo.yml up` in the root directory. the app will run on port 8055

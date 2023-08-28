@@ -1,33 +1,59 @@
 {
-	"name": "@workspace/directus-extension-ai",
-	"version": "1.0.0",
-	"directus:extension": {
-		"host": "^9.22.4",
-		"type": "bundle",
-		"path": {
-			"app": "dist/app.js",
-			"api": "dist/api.js"
-		},
-		"entries": [
-			{
-				"type": "operation",
-				"name": "ml-ops-operation",
-				"source": {
-					"app": "src/ml-ops-operation/app.ts",
-					"api": "src/ml-ops-operation/api.ts"
-				}
-			},
-			{
-				"type": "module",
-				"name": "ml-ops-module",
-				"source": "src/ml-ops-module/index.ts"
-			}
-		]
-	},
-	"devDependencies": {
-		"@directus/extensions-sdk": "9.22.4",
-		"@types/node": "^20.5.7",
-		"typescript": "^5.2.2",
-		"vue": "^3.3.4"
-	}
+  "name": "@workspace/directus-extension-ai",
+  "version": "1.0.0",
+  "dependencies": {
+    "brain.js": "2.0.0-beta.23",
+    "gpu.js": "^2.16.0"
+  },
+  "directus:extension": {
+    "host": "^9.22.4",
+    "type": "bundle",
+    "path": {
+      "app": "dist/app.js",
+      "api": "dist/api.js"
+    },
+    "entries": [
+      {
+        "type": "operation",
+        "name": "ml-ops-operation",
+        "source": {
+          "app": "src/ml-ops-operation/app.ts",
+          "api": "src/ml-ops-operation/api.ts"
+        }
+      },
+      {
+        "type": "endpoint",
+        "name": "ml-ops-endpoint",
+        "source": "src/ml-ops-endpoint/index.ts"
+      },
+      {
+        "type": "hook",
+        "name": "ml-ops-hook",
+        "source": "src/ml-ops-hook/index.ts"
+      },
+      {
+        "type": "interface",
+        "name": "ml-ops-training-interface",
+        "source": "src/ml-ops-training-interface/index.ts"
+      },
+      {
+        "type": "interface",
+        "name": "ml-ops-prediction-interface",
+        "source": "src/ml-ops-prediction-interface/index.ts"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "10.1.9",
+    "@types/node": "^20.5.7",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2",
+    "vue": "^3.3.4"
+  },
+  "scripts": {
+    "dev": "directus-extension build -w",
+    "build": "directus-extension build"
+  }
 }
