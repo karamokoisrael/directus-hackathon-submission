@@ -24,7 +24,7 @@ export default defineEndpoint({
         );
       next();
     });
-    
+
     router.post("/predict/:model", async (req, res) => {
       try {
         const serviceOptions = getReqServiceOptions(context.database, req);
@@ -114,7 +114,7 @@ export default defineEndpoint({
       }
     });
 
-    router.post("/train-new-model", async (req, res) => {
+    router.post("/train", async (req, res) => {
       try {
         const serviceOptions = getReqServiceOptions(context.database, req);
         const trainingData = await getTrainingData(
@@ -122,14 +122,19 @@ export default defineEndpoint({
           context,
           serviceOptions
         );
-        const modelData = await createModelData(
-          req.body as TrainingParams,
-          context,
-          serviceOptions
-        );
+        let modelData = req.body.model_name
+          ? await getModelData(req.body.model_name, context, serviceOptions)
+          : undefined;
+
+        if (!modelData)
+          modelData = await createModelData(
+            req.body as TrainingParams,
+            context,
+            serviceOptions
+          );
         await trainModel(
           {
-            modelData,
+            modelData: modelData as ModelData,
             trainingData,
           },
           context,

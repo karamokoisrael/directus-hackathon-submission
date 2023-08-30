@@ -6,8 +6,22 @@ export default {
   icon: "box",
   description: "",
   component: InterfaceComponent,
-  options: null,
   types: ["alias"],
   localTypes: ["presentation"],
   group: "presentation",
+  options: [
+    {
+      field: "model_name",
+      name: "Model Name",
+      type: "string",
+      meta: {
+        required: true,
+        width: "half",
+        interface: "input",
+        options: {
+          placeholder: "$t:value_unique",
+        },
+      },
+    },
+  ],
 };
