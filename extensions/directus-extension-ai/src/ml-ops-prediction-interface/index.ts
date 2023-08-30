@@ -23,5 +23,19 @@ export default {
         },
       },
     },
+    {
+      field: "display_template",
+      name: "Display Template",
+      type: "string",
+      meta: {
+        required: false,
+        width: "half",
+        interface: "input",
+        options: {
+          placeholder: "$t:value_unique",
+          default_value: null,
+        },
+      },
+    },
   ],
 };
