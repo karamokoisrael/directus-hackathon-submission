@@ -6,8 +6,8 @@
     />
     <br />
     <v-progress-linear v-if="loading" indeterminate />
-    
-    <div style="background-color: #f0f4f9;  height: 200px; width: 100%;">
+
+    <div style="background-color: #f0f4f9; height: 200px; width: 100%">
       {{ predictionOutput }}
     </div>
     <br />
@@ -27,7 +27,7 @@ export default {
   },
   setup(props: Record<string, any>) {
     const api = useApi();
-    const loading = ref(true);
+    const loading = ref(false);
     const predictionOutput = ref("No prediction for now");
     const predictionData = ref("");
     return {
@@ -43,6 +43,7 @@ export default {
     }
     async function predict() {
       try {
+        loading.value = true;
         const response = await api.post(`/ml-ops/predict/${props.model_name}`, {
           payload: [JSON.parse(predictionData.value)],
         });
@@ -51,6 +52,8 @@ export default {
       } catch (error) {
         console.log(error);
         predictionOutput.value = "Something went wrong";
+      } finally {
+        loading.value = false;
       }
     }
   },
