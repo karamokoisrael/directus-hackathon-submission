@@ -20,3 +20,7 @@ This project is a set of extensions allowing developers of the directus communit
 1. Make sure you have created a .env file for directus configurations
 2. Make sure you have docker and docker-compose installed
 3. Run `docker-compose -f docker-compose.demo.yml up` in the root directory. the app will run on port 8055
+
+4. Try to login:
+    - Admin email: `admin@example.com` 
+    - Admin password: `@Admin2019`
