@@ -13,7 +13,7 @@ This project is a set of extensions allowing developers of the directus communit
 
 ## Screenshots
 
-{ Include at least one screenshot or video. }
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cJoY7ABo4UA?si=ymqG44h0lMEdgDrV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## How to run ?
 
