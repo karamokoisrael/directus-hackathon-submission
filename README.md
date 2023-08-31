@@ -12,8 +12,8 @@ This project is a set of extensions allowing developers of the directus communit
 - If I have more time, I will build a complete pipeline so some models can be trained every day with a cron task and only the best one in accuracy with be shipped to production for customer use.
 
 ## Screenshots
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cJoY7ABo4UA?si=ymqG44h0lMEdgDrV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+What the video on youtube
+[![Watch the video](https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/200px-YouTube_social_white_square_%282017%29.svg.png)](https://youtu.be/cJoY7ABo4UA?si=ymqG44h0lMEdgDrV)
 
 ## How to run ?
 
